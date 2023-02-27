@@ -1,0 +1,81 @@
+:root{
+    --primary: #2334DE;
+    --secondary: #14212B;
+    --tertiary: #FFFFFF;
+    /* #ffffff */
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.dropdown{
+    position: relative;
+    display: inline-block;
+    color: var(--secondary);
+}
+.dropdown span{
+    color: var(--secondary);
+    font-weight: 500;
+}
+.dropdown-content{
+    width: 10rem;
+    display: none;
+    position: absolute;
+    color: white;
+    background-color: var(--secondary);
+    border-radius: 10px;
+    margin-top: 0.1rem;
+    border-bottom: #2334DE 3px solid;
+}
+.dropdown-content a{
+    text-align: center;
+    margin: 1rem;
+    font-weight: lighter;
+}
+.dropdown span:hover{
+    color: var(--primary);
+}
+.dropdown:hover .dropdown-content{
+    display: block;
+
+}
+.dropdown-content a{
+    display: inline-block;
+    position: relative;  
+}  
+.dropdown-content a:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+
+  .dropdown-content a:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  .hero-header{
+    background-size: 46rem;
+  }
+  @media (max-width:1046px){.hero-header{background-size: 40rem;}}
+  @media (max-width:910px){.hero-header{background-size: 35rem;}}
+  @media (max-width:822px){.hero-header{background-size: 30rem;}}
+  @media (max-width:676px){.hero-header{background-size:23rem;}}
+  @media (max-width:503px){.hero-header{background-size:20rem;}}
+  @media (max-width:320px){.hero-header{background-size:12rem;}}
+  .menu-bar span{
+    width: 1.5rem;
+    height: 0.2rem;
+    background-color: white;
+    display: block;
+    margin: 4px;
+    border-radius: 7px;
+  }
+  
