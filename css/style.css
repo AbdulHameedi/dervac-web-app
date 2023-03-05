@@ -17,6 +17,7 @@
 .dropdown span{
     color: var(--secondary);
     font-weight: 500;
+    cursor: pointer;
 }
 .dropdown-content{
     width: 10rem;
@@ -68,8 +69,8 @@
   @media (max-width:910px){.hero-header{background-size: 35rem;}}
   @media (max-width:822px){.hero-header{background-size: 30rem;}}
   @media (max-width:676px){.hero-header{background-size:23rem;}}
-  @media (max-width:503px){.hero-header{background-size:20rem;}}
-  @media (max-width:320px){.hero-header{background-size:12rem;}}
+  @media (max-width:503px){.hero-header{background-size:13rem;}}
+  @media (min-width:1440px){.hero-header{background-size:55rem;} .dropdown span{font-size: 1.9rem};}
   .menu-bar span{
     width: 1.5rem;
     height: 0.2rem;
@@ -78,4 +79,54 @@
     margin: 4px;
     border-radius: 7px;
   }
-  
+  .awards{
+    animation-name: awards;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  }
+  @keyframes awards{
+    0%{
+        transform: translateX(3rem);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+  }
+.about{
+    position: relative;
+}
+  .about p:after{
+    content: '';
+    width: 3rem;
+    position: absolute;
+    height: 0.1rem;
+    background-color: white;
+    top: 0.7rem;
+  }
+  .twice p:after{
+    left: 15rem;
+    display: none;
+
+  }
+  .twice p:before{
+    content: '';
+    width: 3rem;
+    position: absolute;
+    height: 0.1rem;
+    background-color: white;
+    top: 0.7rem;
+    left: 3rem;
+    display: none;
+  }
+  @media (max-width:320px){ .twice p:before{display: block;} .twice p:after{display: block;}}
+
+  .establish::before{
+    content: '';
+    height: 28%;    
+    background-color: var(--primary);
+    width: 2px;
+    position: absolute;
+    left: 0;
+    margin-top: -14px;
+  } 
+  @media (max-width:1032px){.establish::before{height: 24%;}}

@@ -1,0 +1,276 @@
+:root {
+  --primary: #2334DE;
+  --secondary: #14212B;
+  --tertiary: #FFFFFF;
+  /* #ffffff */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  color: var(--secondary);
+}
+
+.dropdown span {
+  color: var(--secondary);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  width: 10rem;
+  display: none;
+  position: absolute;
+  color: white;
+  background-color: var(--secondary);
+  border-radius: 10px;
+  margin-top: 0.1rem;
+  border-bottom: #2334DE 3px solid;
+}
+
+.dropdown-content a {
+  text-align: center;
+  margin: 1rem;
+  font-weight: lighter;
+}
+
+.dropdown span:hover {
+  color: var(--primary);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  display: inline-block;
+  position: relative;
+}
+
+.dropdown-content a:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.dropdown-content a:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.hero-header {
+  background-size: 46rem;
+}
+
+@media (max-width: 1046px) {
+  .hero-header {
+    background-size: 40rem;
+  }
+}
+@media (max-width: 910px) {
+  .hero-header {
+    background-size: 35rem;
+  }
+}
+@media (max-width: 822px) {
+  .hero-header {
+    background-size: 30rem;
+  }
+}
+@media (max-width: 676px) {
+  .hero-header {
+    background-size: 23rem;
+  }
+}
+@media (max-width: 503px) {
+  .hero-header {
+    background-size: 13rem;
+  }
+}
+@media (min-width: 1440px) {
+  .hero-header {
+    background-size: 55rem;
+  }
+  .dropdown span {
+    font-size: 1.9rem;
+  }
+}
+.menu-bar span {
+  width: 1.5rem;
+  height: 0.2rem;
+  background-color: white;
+  display: block;
+  margin: 4px;
+  border-radius: 7px;
+}
+
+.awards {
+  animation-name: awards;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes awards {
+  0% {
+    transform: translateX(3rem);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+.about {
+  position: relative;
+}
+
+.about p:after {
+  content: "";
+  width: 3rem;
+  position: absolute;
+  height: 0.1rem;
+  background-color: white;
+  top: 0.7rem;
+}
+
+.twice p:after {
+  left: 15rem;
+  display: none;
+}
+
+.twice p:before {
+  content: "";
+  width: 3rem;
+  position: absolute;
+  height: 0.1rem;
+  background-color: white;
+  top: 0.7rem;
+  left: 3rem;
+  display: none;
+}
+
+@media (max-width: 320px) {
+  .twice p:before {
+    display: block;
+  }
+  .twice p:after {
+    display: block;
+  }
+}
+.establish::before {
+  content: "";
+  height: 28%;
+  background-color: var(--primary);
+  width: 2px;
+  position: absolute;
+  left: 0;
+  margin-top: -14px;
+}
+
+@media (max-width: 1032px) {
+  .establish::before {
+    height: 24%;
+  }
+}
+.services:hover {
+  background-color: #2334DE;
+}
+.services:hover div {
+  background-color: white;
+  color: #2334DE;
+}
+.services:hover p {
+  color: white;
+}
+
+.icons::after {
+  content: "100+";
+  margin: 10px;
+  display: block;
+  animation-name: icon;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+}
+
+.icons2::after {
+  content: "100+";
+  margin: 10px;
+  display: block;
+  animation-name: icon2;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+}
+
+.icons3::after {
+  content: "100+";
+  margin: 10px;
+  display: block;
+  animation-name: icon3;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes icon {
+  0% {
+    content: "1+";
+  }
+  20% {
+    content: "20+";
+  }
+  40% {
+    content: "30+";
+  }
+  50% {
+    content: "50+";
+  }
+  100% {
+    content: "100+";
+  }
+}
+@keyframes icon2 {
+  0% {
+    content: "1+";
+  }
+  20% {
+    content: "50+";
+  }
+  40% {
+    content: "100+";
+  }
+  50% {
+    content: "200+";
+  }
+  100% {
+    content: "300+";
+  }
+}
+@keyframes icon3 {
+  0% {
+    content: "1+";
+  }
+  20% {
+    content: "800+";
+  }
+  40% {
+    content: "900+";
+  }
+  50% {
+    content: "1200+";
+  }
+  100% {
+    content: "1300+";
+  }
+}
+
+/*# sourceMappingURL=output.css.map */

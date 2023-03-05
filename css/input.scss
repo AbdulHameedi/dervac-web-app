@@ -1,0 +1,39 @@
+@import "style";
+$primary: #2334DE;
+.services:hover{
+    background-color: $primary;
+    div{
+        background-color: white;
+        color: $primary;
+    }
+     p{
+        color: white;
+    }
+}
+
+@mixin icon($name){
+    content: '100+';
+    margin: 10px;
+    display: block;
+    animation-name: $name;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+}
+.icons::after{
+   @include icon(icon);
+}
+.icons2::after{
+@include icon (icon2);
+}
+.icons3::after{
+    @include icon (icon3);
+}
+@keyframes icon{
+    0%{content: '1+';}20%{content: '20+';} 40%{content: '30+';}50%{content: '50+';}100%{content: '100+'; }
+}
+@keyframes icon2{
+    0%{content: '1+';}20%{content: '50+';} 40%{content: '100+';}50%{content: '200+';}100%{content: '300+'; }
+}
+@keyframes icon3{
+    0%{content: '1+';}20%{content: '800+';} 40%{content: '900+';}50%{content: '1200+';}100%{content: '1300+'; }
+}
